@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple multi-section HTML5 page about me, showcasing lists, tables, media, and a complete form with validation.">
+    <title>About Me - Enhanced HTML5 Page</title>
+</head>
+<body>
+     <header>
+    <h1>About Me</h1>
+    <p>Hello! My name is  Virginia Juma . Welcome to my personal page.</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#hobbies">My Hobbies</a></li>
+        <li><a href="#skills">My Skills</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#form">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hobbies using a list -->
+    <section id="hobbies">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>Reading books</li>
+        <li>Coding and web development</li>
+        <li>Playing football</li>
+        <li>Listening to music</li>
+      </ul>
+    </section>
+
+    <!-- Skills using a table -->
+    <section id="skills">
+      <h2>My Skills</h2>
+      <table border="1">
+        <caption>Overview of my skills and proficiency levels</caption>
+        <thead>
+          <tr>
+            <th>Skill</th>
+            <th>Proficiency</th>
+            <th>Experience (Years)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML &amp; CSS</td>
+            <td>Advanced</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Intermediate</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Python</td>
+            <td>Intermediate</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Public Speaking</td>
+            <td>Beginner</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <hr>
+
+    <!-- Media content -->
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <figure>
+        <img src="Blue Flowers.jpeg" alt="A photo of blue flowers in a vase" width="230" height="300">
+        <figcaption> One of my favourite flowers</figcaption>
+      </figure>
+      <figure>
+        <audio controls>
+          <source src="Moses_Akoh_-_Love_Letter.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+        <figcaption> An audio of a song in my fave playlist</figcaption>
+      </figure>
+      <figure>
+        <video controls width="400" height="300">
+          <source src="WhatsApp Video 2025-08-29 at 00.42.49_67d443d7.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption> Here is a snippet video of the song above.</figcaption>
+      </figure>
+    </section>
+<hr>
+    <!-- Form -->
+    <section id="form">
+      <h2>Contact Me</h2>
+      <form action="/submit" method="post">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <p>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required minlength="3" placeholder="Your full name" autocomplete="name">
+          </p>
+          <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
+          </p>
+          <p>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" autocomplete="tel">
+          </p>
+          <p>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <p>
+            <label for="contact-method">Preferred Contact Method:</label>
+            <select id="contact-method" name="contact-method" required>
+              <option value="">--Please choose--</option>
+              <option value="email">Email</option>
+              <option value="phone">Phone</option>
+            </select>
+          </p>
+          <p>
+            <label>Subscribe to newsletter?</label>
+            <input type="radio" id="yes" name="newsletter" value="yes" required>
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="newsletter" value="no">
+            <label for="no">No</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Message</legend>
+          <p>
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="40" required minlength="10" placeholder="Write something..."></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Send</button>
+          <button type="reset">Reset</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Virginia Juma. All rights reserved.</p>
+  </footer>
+</body>
+</html>
